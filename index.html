@@ -30,7 +30,16 @@
 img[src="https://www.assoc-amazon.com/e/ir?t=bootswatch-20&l=as2&o=1&a=1593275846"],
 img[src="https://www.assoc-amazon.com/e/ir?t=bootswatch-20&l=as2&o=1&a=098057689X"]
 {display:none !important;}</style>
-  </head>
+  
+
+<style>
+      #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+
+</head>
   <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
@@ -73,5 +82,24 @@ img[src="https://www.assoc-amazon.com/e/ir?t=bootswatch-20&l=as2&o=1&a=098057689
     <script src="./index_files/bootstrap.min.js"></script>
     <script src="./index_files/custom.js"></script>
   <script type="text/javascript">/* <![CDATA[ */(function(d,s,a,i,j,r,l,m,t){try{l=d.getElementsByTagName('a');t=d.createElement('textarea');for(i=0;l.length-i;i++){try{a=l[i].href;s=a.indexOf('/cdn-cgi/l/email-protection');m=a.length;if(a&&s>-1&&m>28){j=28+s;s='';if(j<m){r='0x'+a.substr(j,2)|0;for(j+=2;j<m&&a.charAt(j)!='X';j+=2)s+='%'+('0'+('0x'+a.substr(j,2)^r).toString(16)).slice(-2);j++;s=decodeURIComponent(s)+a.substr(j,m-j)}t.innerHTML=s.replace(/</g,'&lt;').replace(/>/g,'&gt;');l[i].href='mailto:'+t.value}}catch(e){}}}catch(e){}})(document);/* ]]> */</script>
+
+ <h3></h3>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: -25.363, lng: 131.044};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAf5PwSRba_N7X1Vg6O9_4I6Y223OAoNhw&callback=initMap">
+    </script>
 
 </body></html>
